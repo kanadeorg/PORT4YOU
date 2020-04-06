@@ -13,6 +13,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve:  `gatsby-plugin-typescript`,
+      options:{
+        isTSX: true,
+        jsxPragma: `React`,
+        allExtensions: true,
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
