@@ -9,9 +9,11 @@ class Education extends Component<any> {
     render() {
         return (
             <div Style="margin-bottom:100px;">
-                <div class="h3 text-center">Education</div>
-                <hr></hr>
-                <div dangerouslySetInnerHTML={{__html: this.props.data.education.html}}></div>
+                <div data-aos="fade-up">
+                    <div class="h3 text-center">Education</div>
+                    <hr></hr>
+                </div>
+                <div data-aos="zoom-in" dangerouslySetInnerHTML={{__html: this.props.data.education.html}}></div>
             </div>
         );
     }
