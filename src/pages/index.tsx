@@ -148,7 +148,7 @@ class IndexPage extends React.Component<any, IndexState> {
       return (
         <div>
           <ParallaxHeader githubData={this.state.githubData}></ParallaxHeader>
-          <Body githubData={this.state.githubData} repoData={this.state.repoData}></Body>
+          <Body githubData={this.state.githubData} repoData={this.state.repoData} data={this.props.data}></Body>
         </div>
       );
     }
@@ -156,3 +156,20 @@ class IndexPage extends React.Component<any, IndexState> {
 }
 
 export default IndexPage
+
+export const query = graphql`
+{
+  aboutme: markdownRemark(frontmatter: {title:{eq:"aboutme"}}){
+    html
+  },
+  experience: markdownRemark(frontmatter: {title:{eq:"experience"}}){
+    html
+  },
+  skill: markdownRemark(frontmatter: {title:{eq:"skill"}}){
+    html
+  },
+  education: markdownRemark(frontmatter: {title:{eq:"education"}}){
+    html
+  }
+}
+`;

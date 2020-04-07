@@ -24,8 +24,8 @@ const GithubRepos = (props:any) => {
                         <Badge Style="margin-left:5px;" variant="info">{currentLanguageName}</Badge>)}
                     <hr></hr>
                     <div class="row">
-                        <div class="col-sm-6"><FontAwesomeIcon icon={faStar} /> {currentValue.node.stargazers.totalCount}</div>
-                        <div><FontAwesomeIcon icon={faCodeBranch} /> {currentValue.node.forkCount}</div>
+                        <div class="col-6"><FontAwesomeIcon icon={faStar} /> {currentValue.node.stargazers.totalCount}</div>
+                        <div class="col-6"><FontAwesomeIcon icon={faCodeBranch} /> {currentValue.node.forkCount}</div>
                     </div>
                   </Card.Text>
                   <Button Style="width:100%;" variant="primary" onClick={()=>window.open(currentValue.node.url)}>Check it out</Button>
@@ -43,7 +43,8 @@ const GithubRepos = (props:any) => {
     }
     return (
         <div data-aos="zoom-in">
-        <div class="h3">Recent Public Github Projects</div>
+        <div class="h3 text-center">Recent Public Github Projects</div>
+        <hr></hr>
             <div class="row">
                 {createList()}
             </div>

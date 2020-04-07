@@ -21,6 +21,23 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown`,
+        path: `${__dirname}/src/markdown`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options:{
+        commonmark: true,
+        footnotes: true,
+        pedantic: true,
+        gfm: true,
+        plugins: [],
+      }
+    },
+    {
       resolve:  `gatsby-plugin-typescript`,
       options:{
         isTSX: true,
