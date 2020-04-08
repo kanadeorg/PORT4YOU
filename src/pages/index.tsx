@@ -9,7 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ParallaxHeader from "../components/ParallaxHeader";
 import Body from "../components/Body";
 import axios from "axios";
-import { Spinner } from "react-bootstrap";
+import { Spinner, Card } from "react-bootstrap";
+import Footer from "../components/Footer";
 
 interface IndexState{
   isLoading?:boolean,
@@ -149,6 +150,10 @@ class IndexPage extends React.Component<any, IndexState> {
         <div>
           <ParallaxHeader githubData={this.state.githubData}></ParallaxHeader>
           <Body githubData={this.state.githubData} repoData={this.state.repoData} data={this.props.data}></Body>
+          <Footer></Footer>
+          <Card Style="padding:30px;width:100vw;left;margin-bottom:0px;">
+            <div class="text-right">Created by GatsbyJS - Powered by <a href="https://github.com/andywang0625">Kanade W.</a> and YOU!</div>
+          </Card>
         </div>
       );
     }

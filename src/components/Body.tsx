@@ -15,9 +15,6 @@ const Body = (props:any) => {
                 <Experience data={props.data}></Experience>
                 <Education data={props.data}></Education>
                 <GithubRepos repoData={props.repoData}></GithubRepos>
-                <div data-aos="zoom-out-right">
-                    <Card Style="" body>Items</Card>
-                </div>
             </Card>
         </div>
     );
