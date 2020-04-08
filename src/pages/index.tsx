@@ -11,6 +11,7 @@ import Body from "../components/Body";
 import axios from "axios";
 import { Spinner, Card } from "react-bootstrap";
 import Footer from "../components/Footer";
+import MetaTags from 'react-meta-tags';
 
 interface IndexState{
   isLoading?:boolean,
@@ -147,12 +148,18 @@ class IndexPage extends React.Component<any, IndexState> {
       )
     }else{
       return (
-        <div>
+
+        <div Style="width:100vw;overflow-x:hidden;">
+          <MetaTags>
+            <title>{this.state.githubData.data.viewer.name} - PORT4YOU</title>
+            <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no;" />
+            <meta name="Description" content={`Author:${this.state.githubData.data.viewer.name}, Email:${process.env.EMAIL}, GitHub:${process.env.GITHUB_URL}, Linkedin:${process.env.LINKEDIN_URL}, GitLab:${process.env.GITLAB_URL}, Madeby: PORT4YOU`}></meta>
+          </MetaTags>
           <ParallaxHeader githubData={this.state.githubData}></ParallaxHeader>
           <Body githubData={this.state.githubData} repoData={this.state.repoData} data={this.props.data}></Body>
           <Footer></Footer>
           <Card Style="padding:30px;width:100vw;left;margin-bottom:0px;">
-            <div class="text-right">Created by GatsbyJS - Powered by <a href="https://github.com/andywang0625">Kanade W.</a> and YOU!</div>
+            <small class="text-muted text-right">Created by GatsbyJS - Powered by <a href="https://github.com/andywang0625">Kanade W.</a> and YOU!</small>
           </Card>
         </div>
       );

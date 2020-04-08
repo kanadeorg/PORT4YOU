@@ -15,7 +15,7 @@ const GithubRepos = (props:any) => {
             repos.push(
                 <div data-aos="flip-left" class="col-md-4 col-sm-12">
                 <Card>
-                <Card.Img variant="top" src={currentValue.node.openGraphImageUrl} />
+                <Card.Img variant="top" alt={currentValue.node.url} src={currentValue.node.openGraphImageUrl} />
                 <Card.Body>
                   <Card.Title>{currentValue.node.name}</Card.Title>
                   <Card.Text>

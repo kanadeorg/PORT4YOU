@@ -34,10 +34,10 @@ function ParallaxHeader(githubData:any, handleImgLoaded:any) {
       <Container>
         <div data-aos="zoom-in-down">
           <div className="photo-container">
-            <Image Style="height:20vh" src={githubData.githubData.data.viewer.avatarUrl} roundedCircle />
+            <Image Style="height:30vh" alt={`${process.env.GITHUB_URL}`} src={githubData.githubData.data.viewer.avatarUrl} roundedCircle />
           </div>
         </div>
-        <div data-aos="zoom-in-up" data-aos-duration="400">
+        <div Style="margin-bottom:100px;" data-aos="zoom-in-up" data-aos-duration="400">
           <h3 className="title">{githubData.githubData.data.viewer.name}</h3>
           <h5>{process.env.JOB_TITLE}</h5>
           <h5>--{githubData.githubData.data.viewer.bio}</h5>
