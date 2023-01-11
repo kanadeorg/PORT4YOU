@@ -24,7 +24,7 @@
     "gatsby-plugin-typescript": "^2.3.1",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-source-graphql": "^2.3.2",
-    "gatsby-transformer-remark": "^2.7.1",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.4.3",
     "hover.css": "^2.3.2",
     "marked": "^0.8.2",
